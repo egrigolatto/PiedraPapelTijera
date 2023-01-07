@@ -10,7 +10,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('img/fondo.jpg');
+    /* background-image: url('img/fondo.jpg'); */
+    background: url('img/fondo.jpg') no-repeat center center fixed;
     background-size: cover;
     overflow: hidden;
 }
@@ -24,13 +25,12 @@ body{
     margin-top: 30px;
 }
 h1{
-    padding: 40px;
+    padding: 40px 0 50px 0;
     font-family: 'Rubik Wet Paint', cursive;
     font-size: 3rem;  
 }
 .resultados{
     width: 100%;
-    padding: 10px;
     display: none;
 }
 .resultados.mostrar{
@@ -47,9 +47,11 @@ h1{
 .contenedorBotones{
     width: 70%;
     display: flex;
-    justify-content: space-between;
-    padding: 10px;
+    justify-content: space-around;
+    align-items: center;
     border-radius: 5px;
+    text-align: start;
+    padding: 10px;
 }
 
 .contenedorBotones button{
@@ -72,7 +74,7 @@ button img:hover{
 .imgResultados{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
 }
 
@@ -82,11 +84,11 @@ button img:hover{
     border-radius: 15px; 
     box-shadow: 10px 10px 10px rgb(52, 53, 58);
     border: 1px solid rgb(52, 53, 58);
-    margin: 10px;
 }
-.imgBtn{
-    margin:10px;
+.imgBtnM{
+    margin:0 20px 0 20px;
 }
+
 
 @keyframes escalaImagen{
     0%{transform: scale(0);}
@@ -184,7 +186,7 @@ button img:hover{
         width: 80%;
     }
     .resultados{
-        width: 70%;
+        width: 80%;
     }
 }
 @media(min-width:350px) and (max-width:560px){
@@ -199,5 +201,28 @@ button img:hover{
         width: 81.648px;
         height: 73.483px;
     } 
-
+}
+@media(min-width:350px) and (max-width:560px){
+    h1{
+        font-size: 1.6rem;
+    }
+    .imgResultados img{
+        width: 104.976px;
+        height: 94.478px; 
+    }
+    button img{
+        width: 73.483px;
+        height: 66.1347px;
+    } 
+}
+@media(min-width:350px) and (max-width:480px){
+    h1{
+        font-size: 1.4rem;
+    }
+    .contenedor{
+        width: 100%;
+    }
+    .resultados{
+        width: 80%;
+    }
 }
